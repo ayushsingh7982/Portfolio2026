@@ -63,10 +63,10 @@ const Hero = () => {
           {/* Greeting */}
           <div className="space-y-2">
             <p className="text-lg md:text-xl text-foreground-secondary font-jetbrains animate-fade-up">
-              Hey there, I'm
+              Hey there, I'm Ayush
             </p>
             <h1 className="heading-xl gradient-text">
-              <GlitchText text="Alex Chen" />
+              <GlitchText text="Ayush Singh" />
             </h1>
           </div>
 
@@ -77,7 +77,7 @@ const Hero = () => {
               <span className="gradient-text-secondary">code</span>
             </h2>
             <p className="body-lg text-foreground-secondary max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.6s' }}>
-              Frontend Developer crafting premium digital experiences with React, TypeScript, 
+              Full Stack Developer crafting premium digital experiences with React, TypeScript, 
               and modern web technologies. I build interfaces that users love and developers admire.
             </p>
           </div>
@@ -101,7 +101,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 animate-fade-up" style={{ animationDelay: '1.2s' }}>
             <a 
-              href="https://github.com" 
+              href="https://github.com/ayushsingh7982" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground-secondary hover:text-neon-cyan transition-all duration-300 hover:scale-110 hover-glow"
@@ -109,7 +109,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/ayushsingh7982/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground-secondary hover:text-neon-purple transition-all duration-300 hover:scale-110 hover-glow"
@@ -117,7 +117,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:alex@example.com"
+              href="mailto:singhayush8376@gmail.com"
               className="text-foreground-secondary hover:text-neon-cyan transition-all duration-300 hover:scale-110 hover-glow"
             >
               <Mail className="w-6 h-6" />

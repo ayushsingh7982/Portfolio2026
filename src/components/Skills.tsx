@@ -5,24 +5,24 @@ const skillsData = [
     category: "Frontend",
     color: "neon-cyan",
     skills: [
-      { name: "React", level: 95, experience: "4+ years" },
-      { name: "TypeScript", level: 90, experience: "3+ years" },
-      { name: "Next.js", level: 85, experience: "2+ years" },
+      { name: "React", level: 90, experience: "2+ years" },
+      { name: "TypeScript", level: 70, experience: "1+ years" },
+      { name: "Bootstrap", level: 95, experience: "3+ years" },
       { name: "Tailwind CSS", level: 95, experience: "3+ years" },
-      { name: "Vue.js", level: 75, experience: "1+ years" },
-      { name: "SASS/SCSS", level: 90, experience: "4+ years" },
+      { name: "JavaScript", level: 90, experience: "3+ years" },
+      { name: "SASS/SCSS", level: 90, experience: "1+ years" },
     ]
   },
   {
     category: "Backend & Tools",
     color: "neon-purple",
     skills: [
-      { name: "Node.js", level: 80, experience: "2+ years" },
-      { name: "GraphQL", level: 75, experience: "2+ years" },
-      { name: "PostgreSQL", level: 70, experience: "2+ years" },
-      { name: "Docker", level: 65, experience: "1+ years" },
-      { name: "AWS", level: 60, experience: "1+ years" },
-      { name: "Git", level: 95, experience: "4+ years" },
+      { name: "Node.js", level: 75, experience: "2+ years" },
+      { name: "Express.js", level: 70, experience: "2+ years" },
+      { name: "PostgreSQL", level: 65, experience: "2+ years" },
+      { name: "MongoDB", level: 70, experience: "2+ years" },
+      { name: "SQL", level: 60, experience: "2+ years" },
+      { name: "Git", level: 95, experience: "3+ years" },
     ]
   },
   {
@@ -30,11 +30,11 @@ const skillsData = [
     color: "neon-green",
     skills: [
       { name: "Figma", level: 85, experience: "3+ years" },
-      { name: "Adobe XD", level: 80, experience: "2+ years" },
-      { name: "Framer Motion", level: 90, experience: "2+ years" },
+      { name: "Canva", level: 80, experience: "3+ years" },
+      { name: "Framer Motion", level: 90, experience: "1+ years" },
       { name: "Three.js", level: 70, experience: "1+ years" },
-      { name: "GSAP", level: 75, experience: "2+ years" },
-      { name: "Responsive Design", level: 95, experience: "4+ years" },
+      { name: "GSAP", level: 55, experience: "1+ years" },
+      { name: "Responsive Design", level: 95, experience: "3+ years" },
     ]
   }
 ];

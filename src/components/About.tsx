@@ -1,4 +1,4 @@
-import { Code, Coffee, Gamepad2, MapPin, Calendar } from "lucide-react";
+import { Code, Footprints,Coffee, Gamepad2, MapPin, Calendar } from "lucide-react";
 import developerPhoto from "@/assets/developer-photo.jpg";
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="heading-lg gradient-text mb-6">About Me</h2>
           <p className="body-lg text-foreground-secondary max-w-2xl mx-auto">
-            The story behind the code
+            The <span className="neon-cyan">Chaos</span> behind the code
           </p>
         </div>
 
@@ -19,20 +19,26 @@ const About = () => {
               <h3 className="heading-md text-foreground">My Journey</h3>
               <div className="space-y-4 text-foreground-secondary body-base">
                 <p>
-                  What started as a curiosity about "how websites work" during college quickly 
-                  became an obsession. I remember staying up until 3 AM building my first 
-                  responsive website and feeling like I had discovered magic.
+                  What started as a curiosity in my early college days soon
+                  turned into a deep passion for creating things with code. I
+                  still remember the excitement of building my first interactive
+                  project — spending hours debugging, learning from mistakes,
+                  and feeling an unmatched thrill when it finally worked.
                 </p>
                 <p>
-                  Fast forward 4+ years, and I've transformed that late-night passion into a 
-                  career crafting digital experiences for startups and established companies. 
-                  I specialize in React ecosystems, but I'm always excited to dive into new 
-                  technologies that solve real problems.
+                  Over time, I moved from simple HTML/CSS pages to mastering
+                  JavaScript, React, and full-stack development with the MERN
+                  stack. From freelance gigs to internship experiences, each
+                  project taught me not just about clean, functional code, but
+                  also about solving real-world problems efficiently and
+                  creatively.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring the latest design trends, 
-                  contributing to open source, or perfecting my coffee brewing technique 
-                  (because great code needs great fuel ☕).
+                  Today, I continue to push my limits by exploring new
+                  technologies, contributing to meaningful projects, and
+                  refining my craft. And when I’m not coding, I’m probably
+                  running, working out, or diving into tech trends that inspire
+                  my next big idea.
                 </p>
               </div>
             </div>
@@ -43,19 +49,27 @@ const About = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-neon-cyan" />
-                  <span className="text-foreground-secondary">San Francisco, CA</span>
+                  <span className="text-foreground-secondary">
+                    Delhi, India
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Calendar className="w-5 h-5 text-neon-purple" />
-                  <span className="text-foreground-secondary">4+ Years Experience</span>
+                  <span className="text-foreground-secondary">
+                    2+ Years Experience
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Coffee className="w-5 h-5 text-neon-cyan" />
-                  <span className="text-foreground-secondary">Coffee Enthusiast</span>
+                  <Footprints className="w-5 h-5 text-neon-cyan" />
+                  <span className="text-foreground-secondary">
+                    Running
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Gamepad2 className="w-5 h-5 text-neon-purple" />
-                  <span className="text-foreground-secondary">Indie Game Dev</span>
+                  <span className="text-foreground-secondary">
+                    Mobile Games
+                  </span>
                 </div>
               </div>
             </div>
@@ -65,14 +79,14 @@ const About = () => {
           <div className="relative">
             <div className="card-elevated max-w-md mx-auto">
               <div className="relative overflow-hidden rounded-xl">
-                <img 
-                  src={developerPhoto} 
-                  alt="Alex Chen - Frontend Developer"
+                <img
+                  src={developerPhoto}
+                  alt="Ayush Singh - Frontend Developer"
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
-              
+
               {/* Code Window Overlay */}
               <div className="absolute -bottom-6 -right-6 glass rounded-lg p-4 border border-neon-cyan/20">
                 <div className="flex items-center space-x-2 mb-2">
@@ -91,11 +105,14 @@ const About = () => {
               </div>
             </div>
 
-              {/* Floating Icons */}
+            {/* Floating Icons */}
             <div className="absolute top-10 -left-6 glass rounded-full p-3 animate-float">
               <Code className="w-6 h-6 text-neon-cyan" />
             </div>
-            <div className="absolute bottom-20 -right-8 glass rounded-full p-3 animate-float" style={{ animationDelay: "1s" }}>
+            <div
+              className="absolute bottom-20 -right-8 glass rounded-full p-3 animate-float"
+              style={{ animationDelay: "1s" }}
+            >
               <Coffee className="w-6 h-6 text-neon-purple" />
             </div>
           </div>
