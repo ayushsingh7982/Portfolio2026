@@ -79,6 +79,9 @@ const SkillCard = ({ skill, color, index }: { skill: any; color: string; index: 
         </div>
       </div>
 
+      {/* Additional Info on Hover */}
+      {/* Uncomment if you want to show additional info on hover */}
+
       {isHovered && (
         <div className="mt-4 p-3 glass rounded-lg animate-fade-up">
           <p className="text-xs text-foreground-secondary">
