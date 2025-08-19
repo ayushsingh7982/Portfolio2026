@@ -31,7 +31,7 @@ const skillsData = [
     skills: [
       { name: "Figma", level: 85, experience: "3+ years" },
       { name: "Canva", level: 80, experience: "3+ years" },
-      { name: "Framer Motion", level: 90, experience: "1+ years" },
+      { name: "Framer Motion", level: 60, experience: "1+ years" },
       { name: "Three.js", level: 70, experience: "1+ years" },
       { name: "GSAP", level: 55, experience: "1+ years" },
       { name: "Responsive Design", level: 95, experience: "3+ years" },
@@ -131,10 +131,10 @@ const Skills = () => {
         {/* Interactive Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-6">
           {[
-            { label: "Projects Completed", value: "50+", color: "neon-cyan" },
-            { label: "Years Experience", value: "4+", color: "neon-purple" },
-            { label: "Happy Clients", value: "25+", color: "neon-green" },
-            { label: "Cups of Coffee", value: "∞", color: "neon-pink" },
+            { label: "Projects Completed", value: "25+", color: "neon-cyan" },
+            { label: "Years Experience", value: "3+", color: "neon-purple" },
+            { label: "Happy Clients", value: "10+", color: "neon-green" },
+            { label: "Lines of Code", value: "∞", color: "neon-pink" },
           ].map((stat, index) => (
             <div key={stat.label} className="card-glass text-center p-6 hover-lift">
               <div className={`text-3xl font-bold text-${stat.color} mb-2`}>
