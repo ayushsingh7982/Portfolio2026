@@ -1,86 +1,126 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Eye } from "lucide-react";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
-import projectDashboard from "@/assets/project-dashboard.jpg";
+import wanderlust from "@/assets/wanderlust.png";
+import weatherapp from "@/assets/weatherapp.png";
+import yantra from "@/assets/yantra.png";
 import projectMobile from "@/assets/project-mobile.jpg";
+import portfolio from "@/assets/portfolio.png";
+import golfpage from "@/assets/golfpage.png";
+import greenfinite from "@/assets/greenfinite.png";
 
 const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Modern e-commerce solution with real-time inventory, advanced filtering, and seamless checkout experience.",
-    image: projectEcommerce,
-    tech: ["React", "TypeScript", "Next.js", "Stripe", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: true,
-    category: "Full-Stack"
+    title: "Wanderlust - Book your Stay",
+    description:
+      "Modern hotel listing and booking platform with real time listing and geolocations via Mapbox  API.",
+    image: wanderlust,
+    tech: [
+      "React",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "EJS",
+      "Tailwind",
+      "Mapbox",
+      "Bootstrap",
+    ],
+    liveUrl: "https://wanderlust-kerf.onrender.com/",
+    githubUrl: "https://github.com/ayushsingh7982/wanderlust",
+    featured: false,
+    category: "Full-Stack",
   },
   {
     id: 2,
-    title: "Analytics Dashboard",
-    description: "Comprehensive analytics platform with real-time data visualization and interactive charts.",
-    image: projectDashboard,
-    tech: ["React", "D3.js", "Node.js", "GraphQL", "Redis"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    title: "Badal-Weather App",
+    description: "Comprehensive analytics along with realtime weather updates.",
+    image: weatherapp,
+    tech: ["React", "TailwindCSS", "API"],
+    liveUrl: "https://weatherapp-wv8f.onrender.com/",
+    githubUrl: "https://github.com/ayushsingh7982/WeatherApp",
     featured: false,
-    category: "Frontend"
+    category: "Frontend",
   },
   {
     id: 3,
-    title: "Fitness Mobile App",
-    description: "Cross-platform fitness tracking app with workout plans, progress tracking, and social features.",
-    image: projectMobile,
-    tech: ["React Native", "TypeScript", "Firebase", "Expo"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: false,
-    category: "Mobile"
+    title: "Responsive Portfolio",
+    description:
+      "A sleek, modern portfolio website to showcase my projects and skills.",
+    image: portfolio,
+    tech: [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Vite",
+      "Typescript",
+      "Figma",
+      "React Router",
+    ],
+    liveUrl: "https://ayushsingh7982.github.io/FinalPortfolio2026/",
+    githubUrl: "https://ayushsingh7982.github.io/FinalPortfolio2026/",
   },
   {
     id: 4,
-    title: "AI Chat Interface",
-    description: "Intelligent chat interface with natural language processing and real-time responses.",
-    image: projectDashboard,
-    tech: ["React", "WebSocket", "OpenAI", "Node.js"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: false,
-    category: "AI/ML"
+    title: "Greenfinite AI",
+    description:
+      "Driving a sustainable future through technology-powered environmental solutions.",
+    image: greenfinite,
+    tech: [
+      "React",
+      "RAG",
+      "OpenAI",
+      "LLM",
+      " Tailwind",
+      "Fast API",
+      "Python",
+      "Pydantic",
+      "Matplotlib",
+    ],
+    liveUrl: "https://www.greenfinite.ai/",
+    githubUrl: "https://github.com/ayushsingh7982",
+    featured: true,
+    category: "AI/ML",
   },
   {
     id: 5,
-    title: "Design System",
-    description: "Comprehensive design system with reusable components and documentation.",
-    image: projectEcommerce,
-    tech: ["React", "Storybook", "Tailwind", "TypeScript"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    title: "UI/UX Design ",
+    description:
+      "Comprehensive design system with reusable components and documentation.",
+    image: yantra,
+    tech: ["React", "Figma", "Tailwind", "Canva", "Adobe Photoshop"],
+    liveUrl: "https://www.yaantra.com/",
+    githubUrl: "https://github.com/ayushsingh7982",
     featured: false,
-    category: "Design"
+    category: "Design",
   },
   {
     id: 6,
-    title: "Blockchain DApp",
-    description: "Decentralized application for NFT marketplace with Web3 integration.",
-    image: projectMobile,
-    tech: ["React", "Web3.js", "Solidity", "Ethereum"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    featured: false,
-    category: "Web3"
-  }
+    title: "Golf Page Landing Page",
+    description:
+      "A captivating landing page to promote a Web app, highlighting its features and benefits.",
+    image: golfpage,
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    liveUrl: "https://ayushsingh7982.github.io/GolfLandingPage/",
+    githubUrl: "https://github.com/ayushsingh7982/GolfLandingPage",
+  },
 ];
 
-const categories = ["All", "Full-Stack", "Frontend", "Mobile", "AI/ML", "Design", "Web3"];
+const categories = ["All", "Full-Stack", "Frontend", "AI/ML", "Design"];
 
-const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered: boolean; onHover: (id: number | null) => void }) => {
+const ProjectCard = ({
+  project,
+  isHovered,
+  onHover,
+}: {
+  project: any;
+  isHovered: boolean;
+  onHover: (id: number | null) => void;
+}) => {
   return (
     <div
       className={`relative group cursor-pointer transition-all duration-500 hover-lift ${
-        project.featured ? 'md:col-span-2 md:row-span-2' : ''
+        project.featured ? "md:col-span-2 md:row-span-2" : ""
       }`}
       onMouseEnter={() => onHover(project.id)}
       onMouseLeave={() => onHover(null)}
@@ -91,24 +131,30 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
             src={project.image}
             alt={project.title}
             className={`w-full object-cover transition-all duration-700 ${
-              project.featured ? 'h-64' : 'h-48'
-            } ${isHovered ? 'scale-110' : 'scale-100'}`}
+              project.featured ? "h-64" : "h-48"
+            } ${isHovered ? "scale-110" : "scale-100"}`}
           />
-          
+
           {/* Overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent transition-opacity duration-300 ${
-            isHovered ? 'opacity-90' : 'opacity-40'
-          }`} />
-          
+          <div
+            className={`absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent transition-opacity duration-300 ${
+              isHovered ? "opacity-90" : "opacity-40"
+            }`}
+          />
+
           {/* Action Buttons */}
-          <div className={`absolute top-4 right-4 flex space-x-2 transition-all duration-300 ${
-            isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
-          }`}>
+          <div
+            className={`absolute top-4 right-4 flex space-x-2 transition-all duration-300 ${
+              isHovered
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-2"
+            }`}
+          >
             <Button
               size="sm"
               variant="ghost-neon"
               className="p-2"
-              onClick={() => window.open(project.liveUrl, '_blank')}
+              onClick={() => window.open(project.liveUrl, "_blank")}
             >
               <ExternalLink className="w-4 h-4" />
             </Button>
@@ -116,7 +162,7 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
               size="sm"
               variant="ghost-neon"
               className="p-2"
-              onClick={() => window.open(project.githubUrl, '_blank')}
+              onClick={() => window.open(project.githubUrl, "_blank")}
             >
               <Github className="w-4 h-4" />
             </Button>
@@ -129,7 +175,7 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
             </span>
           </div>
         </div>
-        
+
         <div className="p-6 space-y-4">
           <div>
             <h3 className="heading-sm text-foreground mb-2 group-hover:text-neon-cyan transition-colors">
@@ -139,7 +185,7 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
               {project.description}
             </p>
           </div>
-          
+
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2">
             {project.tech.map((tech: string) => (
@@ -151,13 +197,13 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
               </span>
             ))}
           </div>
-          
+
           {/* Action Buttons */}
           <div className="flex space-x-3 pt-2">
             <Button
               variant="neon"
               size="sm"
-              onClick={() => window.open(project.liveUrl, '_blank')}
+              onClick={() => window.open(project.liveUrl, "_blank")}
               className="flex-1"
             >
               <Eye className="w-4 h-4 mr-2" />
@@ -166,7 +212,7 @@ const ProjectCard = ({ project, isHovered, onHover }: { project: any; isHovered:
             <Button
               variant="ghost-neon"
               size="sm"
-              onClick={() => window.open(project.githubUrl, '_blank')}
+              onClick={() => window.open(project.githubUrl, "_blank")}
               className="flex-1"
             >
               <Github className="w-4 h-4 mr-2" />
@@ -183,9 +229,10 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  const filteredProjects = selectedCategory === "All" 
-    ? projectsData 
-    : projectsData.filter(project => project.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
 
   return (
     <section id="projects" className="py-20 relative">
@@ -226,9 +273,15 @@ const Projects = () => {
 
         {/* View More */}
         <div className="text-center mt-12">
-          <Button variant="ghost-neon" size="lg">
-            View All Projects on GitHub
-            <Github className="w-5 h-5 ml-2" />
+          <Button asChild variant="ghost-neon" size="lg">
+            <a
+              href="https://github.com/ayushsingh7982"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View All Projects on GitHub
+              <Github className="w-5 h-5 ml-2" />
+            </a>
           </Button>
         </div>
       </div>

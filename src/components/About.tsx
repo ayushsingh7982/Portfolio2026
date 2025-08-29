@@ -78,14 +78,14 @@ const About = () => {
           {/* Photo Side */}
           <div className="relative">
             <div className="card-elevated max-w-md mx-auto">
-              <div className="relative overflow-hidden rounded-xl">
+              {/* <div className="relative overflow-hidden rounded-xl">
                 <img
                   src={developerPhoto}
                   alt="Ayush Singh - Frontend Developer"
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              </div>
+              </div> */}
 
               {/* Code Window Overlay */}
               <div className="absolute -bottom-6 -right-6 glass rounded-lg p-4 border border-neon-cyan/20">
