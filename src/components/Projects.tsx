@@ -59,6 +59,7 @@ const projectsData = [
     ],
     liveUrl: "https://ayushsingh7982.github.io/FinalPortfolio2026/",
     githubUrl: "https://ayushsingh7982.github.io/FinalPortfolio2026/",
+    category: "Frontend",
   },
   {
     id: 4,
@@ -103,6 +104,7 @@ const projectsData = [
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     liveUrl: "https://ayushsingh7982.github.io/GolfLandingPage/",
     githubUrl: "https://github.com/ayushsingh7982/GolfLandingPage",
+    category: "Frontend",
   },
 ];
 
