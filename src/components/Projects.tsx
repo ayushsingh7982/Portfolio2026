@@ -4,7 +4,6 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 import wanderlust from "@/assets/wanderlust.png";
 import weatherapp from "@/assets/weatherapp.png";
 import yantra from "@/assets/yantra.png";
-import projectMobile from "@/assets/project-mobile.jpg";
 import portfolio from "@/assets/portfolio.png";
 import golfpage from "@/assets/golfpage.png";
 import greenfinite from "@/assets/greenfinite.png";
